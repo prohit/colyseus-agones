@@ -23,12 +23,12 @@
 #     \_/ \__,_|_|  |_|\__,_|_.__/|_|\___|___/
 #
 
-REPOSITORY = pratikxman
+REPOSITORY = gcr.io/friendly-sensor-272112
 
 # Directory that this Makefile is in.
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 project_path := $(dir $(mkfile_path))
-server_tag = $(REPOSITORY)/colyseus:0.4
+server_tag = $(REPOSITORY)/colyseus:0.5
 root_path = $(realpath $(project_path)/..)
 
 #   _____                    _
@@ -40,7 +40,7 @@ root_path = $(realpath $(project_path)/..)
 
 # build the nodejs-simple binary
 build:
-	cd $(root_path) && docker build -f $(project_path)/Dockerfile --tag=$(server_tag) .
+	cd $(root_path) && docker build -f $(project_path)/Dockerfile --platform=linux/amd64 --tag=$(server_tag) .
 
 run:
 	docker run --network=host $(server_tag) $(args)

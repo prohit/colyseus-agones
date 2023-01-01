@@ -32,5 +32,5 @@ spec:
     spec:
       containers:
       - name: colyseus
-        image: docker.io/pratikxman/colyseus:0.4
+        image: gcr.io/friendly-sensor-272112/colyseus:0.5
         # args: ["--timeout=0"] # Change the timeout here, if you like the nodejs server to run longer.
