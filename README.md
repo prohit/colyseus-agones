@@ -15,7 +15,7 @@ Steps to run multinode colyseus game server
         kubectl apply -f https://raw.githubusercontent.com/googleforgames/agones/release-1.28.0/install/yaml/install.yaml
 
     > run the below command to create a multi node colyseus game server
-        kubectl apply -f fleet.yaml
+        kubectl apply -f https://raw.githubusercontent.com/prohit/colyseus-agones/main/fleet.yaml
 
     > run "kubectl get gs" to see the status of all game servers
     > run "kubectl logs {gameserver-name} colyseus -f" to check the log of particular game server
