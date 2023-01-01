@@ -23,6 +23,8 @@ const connect = async () => {
 		console.log('...connected to Colyseus SDK server');
         await agonesSDK.ready();
         console.log('...Colyseus SDK server is ready');
+		await agonesSDK.allocate();
+		console.log('...Colyseus SDK server is allocated');
         listen(arenaConfig, 2558);
 		
 	} catch (error) {
