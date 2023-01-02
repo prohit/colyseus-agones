@@ -1,6 +1,5 @@
 
 Steps to run multi node colyseus game server
-   > Change the root folder name to 'colyseus'
    > Install docker
    > Launch docker desktop
    > To Build the container, change image url in Makefile, gameserver.yaml and fleet.yaml and run commands.
